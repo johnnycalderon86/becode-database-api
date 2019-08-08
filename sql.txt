@@ -4,4 +4,3 @@ CREATE TABLE Notes_DB.notes_table (
      Title VARCHAR(100) NOT NULL ,
       Note VARCHAR(500) NOT NULL ,
        PRIMARY KEY (AuthorID)) 
-       ENGINE = MyISAM;
