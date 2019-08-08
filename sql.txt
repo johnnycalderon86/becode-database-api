@@ -1,4 +1,5 @@
-CREATE TABLE Notes_DB.notes_table ( 
+CREATE DATABASE Notes_DB;
+CREATE TABLE notes_table ( 
     AuthorID INT NOT NULL AUTO_INCREMENT ,
      AuthorName VARCHAR(100) NOT NULL , 
      Title VARCHAR(100) NOT NULL ,
