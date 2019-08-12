@@ -30,6 +30,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //-------------------Sanitize-----------------//
+$clean_title = filter_var($title, FILTER_SANITIZE_STRING);
+$clean_note = filter_var($note_input, FILTER_SANITIZE_STRING);
 
 
 $conn->close();
