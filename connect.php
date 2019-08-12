@@ -30,11 +30,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //-------------------Sanitize-----------------//
-$polish_title = filter_var($title, FILTER_SANITIZE_STRING);
 $polish_note = filter_var($note, FILTER_SANITIZE_STRING);
 
 //-----------------Validate-----------------//
 
-$conn->close();
-
-?>
