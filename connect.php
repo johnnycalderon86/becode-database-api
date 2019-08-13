@@ -30,7 +30,29 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //-------------------Sanitize-----------------//
-$polish_note = filter_var($note, FILTER_SANITIZE_STRING);
+$clean_note = filter_var($note, FILTER_SANITIZE_STRING);
+$clean_title = filter_var($title, FILTER_SANITIZE_STRING);
 
 //-----------------Validate-----------------//
 
+if ($clean_title === false) {
+    echo 'a title is required';
+    } else {
+    echo 'title is valid';
+    }
+    
+    if ($clean_note === false) {
+    echo 'a note is required';
+    } else {
+    echo 'note is valid';
+    }
+$sql = "SELECT * FROM notes_table";
+$result = mysqli_query($conn, $sql);   
+$json_array = array();
+while($row = mysqli_fetch_assoc($result)) {
+    $json_array[] = $row;
+}
+// echo json_encode($json_array);
+echo'<pre>';
+print_r($json_array)
+?>
